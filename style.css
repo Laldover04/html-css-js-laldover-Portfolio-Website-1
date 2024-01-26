@@ -27,7 +27,7 @@ a,
 
 /* DESKTOP NAV */
 
-nav, nav-links {
+nav, .nav-links {
     display: flex;
 }
 
@@ -260,27 +260,27 @@ section {
 /* ABOUT SECTION */
 
 #about {
-    position: relative;
+  position: relative;
 }
 
 .about-containers {
-    gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .about-details-container {
-    justify-content: center;
-    flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about-containers,
 .about-details-container {
-    display: flex;
+  display: flex;
 }
 
 .about-pic {
-    border-radius: 2rem;
+  border-radius: 2rem;
 }
 
 .arrow {
@@ -291,7 +291,7 @@ section {
 
 .details-container {
     padding: 1.5rem;
-    flex: 2;
+    flex: 1;
     background: white;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
@@ -309,3 +309,22 @@ section {
     width: 400px;
     margin: auto 0;
 }
+
+/* EXPERIENCE SECTION */
+
+#experience {
+    position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }

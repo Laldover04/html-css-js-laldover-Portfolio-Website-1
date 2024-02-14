@@ -172,6 +172,10 @@ section {
     margin: auto 0;
 }
 
+.profile-photo {
+    border-radius: 50%;
+}
+
 .section__text {
     align-self: center;
     text-align: center;
@@ -366,13 +370,25 @@ article .icon {
 }
 
 .project-title {
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
     color: black;
 }
 
 .project-btn {
     color: black;
     border-color: rgb(163, 163, 163);
+}
+
+.project-description {
+    margin: .5rem;
+    font-size: 1.1rem;
+}
+
+.project-skills {
+    margin: .5rem;
+    font-size: 1rem;
+    color: rgb(80, 80, 80);
 }
 
 /* CONTACT */

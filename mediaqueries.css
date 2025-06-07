@@ -11,6 +11,11 @@
     }
 }
 @media screen and (max-width: 1200px) {
+
+    #profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
     #desktop-nav {
         display: none;
     }
@@ -36,9 +41,14 @@
         width: 275px;
         height: 275px;
         margin: 0 auto 2rem;
+        margin-top: 10vh;
     }
     .about-containers {
         margin-top: 0;
+    }
+
+    .about-pic {
+        display: none;
     }
 }
 

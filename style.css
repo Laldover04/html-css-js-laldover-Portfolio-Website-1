@@ -44,7 +44,8 @@ nav {
     font-size: 1.5rem;
 }
 
-#desktop-nav , #hamburger-nav{
+/* TODO add hamburger nav fixed */
+#desktop-nav, #hamburger-nav {
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -75,7 +76,7 @@ a:hover {
 
 #hamburger-nav {
     display: none;
-    height: 10%;
+    height: 10vh;
 }
 
 .hamburger-menu {
@@ -500,4 +501,21 @@ footer p {
         .mask {
             mix-blend-mode: multiply;
             background-image: url(/assets/Holo-Shader-Pattern.png);
+        }
+
+
+        /* ARCADE */
+
+        #desktop-nav.compact {
+            height: 6vh;
+        }
+
+        #board {
+            margin-top: 10vh;
+        }
+
+        #LI-cabinet {
+            mix-blend-mode: multiply;
+            
+            background-image: url(/assets/components/Holo-Shader-Pattern.png);
         }

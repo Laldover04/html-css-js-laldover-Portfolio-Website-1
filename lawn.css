@@ -1,9 +1,11 @@
 body {
     font-family:'Courier New', Courier, monospace;
     text-align: center;
+    background-color: rgb(25, 26, 34);
+    
 }
 
 #board {
-    background-color: black;
+    background-color: rgb(30, 30, 30);
 }
 

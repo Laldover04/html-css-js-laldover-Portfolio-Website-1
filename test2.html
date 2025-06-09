@@ -2,12 +2,7 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawn Invaders</title>
-    <link rel="stylesheet" href="lawn.css">
-    <script src="lawn.js"></script>
-
+    <title>Canvas with Image Overlay</title>
     <style>
         body {
             margin: 0;
@@ -35,11 +30,11 @@
         #frameImage {
             position: absolute;
             /*  Absolutely position the frame */
-            top: -73%;
-            left: -97%;
-            width: 1500px;
+            top: 0;
+            left: 0;
+            width: 100%;
             /*  Match the container width */
-            height: 1650px;
+            height: 100%;
             /* Match the container height */
             pointer-events: none;
             /*  Allows interaction with the canvas below */
@@ -52,32 +47,41 @@
 <body>
 
     <div id="container">
-
-        <canvas id="board"></canvas>
+        <canvas id="myCanvas" width="600" height="400"></canvas>
         <img id="frameImage" src="assets/games/lawn-invaders-machine-2.png" alt="Frame">
-        <p><br><br><br><br><br><br><br><br></p>
+        <p><br><br><br><br><br><br><br><br><br><br></p>
     </div>
 
 
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Example: Draw a rectangle on the canvas
+        ctx.fillStyle = "lightblue";
+        ctx.fillRect(50, 50, 100, 80);
+
+        ctx.fillStyle = "red";
+        ctx.font = "20px Arial";
+        ctx.fillText("Canvas Content", 200, 100);
+
+
+        //Optional: Draw a dynamic element
+        function drawCircle(x, y) {
+            ctx.beginPath();
+            ctx.arc(x, y, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "green";
+            ctx.fill();
+        }
+
+        canvas.addEventListener("mousemove", function (event) {
+            const x = event.clientX - canvas.offsetLeft;
+            const y = event.clientY - canvas.offsetTop;
+            drawCircle(x, y);
+        });
+
+
+    </script>
 </body>
-<!-- 
-<body>
-    <nav id="desktop-nav" class="compact">
-        <div class="logo"><img class="logo" src="./assets/images/Me-stencil-scary.png" alt="Logo"></div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="index.html">Return</a></li>
-                <li><a href="test.html">test</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div>
-        <h2><br><br><br></h2>
-        <div id="LI-cabinet"></div>
-    </div>
-
-</body> -->
-
 
 </html>

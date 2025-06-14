@@ -8,51 +8,12 @@
     <link rel="stylesheet" href="lawn.css">
     <script src="lawn.js"></script>
 
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            /* Prevents scrollbars */
-            background-color: #f0f0f0;
-            /* Light background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            /* Occupy full viewport height */
-        }
-
-        #container {
-            position: relative;
-            /*  Important for relative positioning of children */
-        }
-
-        #myCanvas {
-            border: 1px solid #000;
-            /* Optional: Canvas border */
-        }
-
-        #frameImage {
-            position: absolute;
-            /*  Absolutely position the frame */
-            top: -73%;
-            left: -97%;
-            width: 1500px;
-            /*  Match the container width */
-            height: 1650px;
-            /* Match the container height */
-            pointer-events: none;
-            /*  Allows interaction with the canvas below */
-            z-index: 10;
-            /* Ensure the frame is on top */
-        }
-    </style>
 </head>
 
 <body>
 
     <div id="container">
-
+        <p><br><br><br><br></p>
         <canvas id="board"></canvas>
         <img id="frameImage" src="assets/games/lawn-invaders-machine-2.png" alt="Frame">
         <p><br><br><br><br><br><br><br><br></p>

@@ -41,7 +41,7 @@ let zombieImgArray = [];
 
 //peas
 let peaArray = [];
-let peaVelocityY = -10; //pea moving speed
+let peaVelocityY = -7; //pea moving speed
 
 let score = 0;
 let gameOver = false;
@@ -101,11 +101,11 @@ function update() {
         score += zombieColumns * zombieRows * 100; //bonus points :)
         zombieColumns = Math.min(zombieColumns + 1, columns/2 -2); //cap at 16/2 -2 = 6
         zombieRows = Math.min(zombieRows + 1, rows-4);  //cap at 16-4 = 12
-        if (zombieVelocityX > 0) {
-            zombieVelocityX += 0.2; //increase the zombie movement speed towards the right
+        if (zombieVelocityX < 1.2) {
+            zombieVelocityX += 0.1; //increase the zombie movement speed towards the right
         }
         else {
-            zombieVelocityX -= 0.2; //increase the zombie movement speed towards the left
+            zombieVelocityX -= 0.3; //increase the zombie movement speed towards the left
         }
         zombieArray = [];
         peaArray = [];
@@ -124,7 +124,7 @@ function moveZombies(){
         if (zombie.alive) {
             let randomNum = Math.floor(Math.random() * 3)
             if(randomNum > 1)
-             zombie.y += randomNum - 1;
+             zombie.y += randomNum - .8;
 
             //random movement left or right
             zombie.x += (zombieVelocityX - randomNum)

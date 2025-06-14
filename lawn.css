@@ -9,3 +9,33 @@ body {
     background-color: rgb(30, 30, 30);
 }
 
+body {
+            margin: 0;
+            overflow: hidden;
+            /* Prevents scrollbars */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Occupy full viewport height */
+        }
+
+        #container {
+            position: relative;
+            /*  Important for relative positioning of children */
+        }
+
+        #frameImage {
+            position: absolute;
+            /*  Absolutely position the frame */
+            top: -51%;
+            left: -97%;
+            width: 1500px;
+            /*  Match the container width */
+            height: 1650px;
+            /* Match the container height */
+            pointer-events: none;
+            /*  Allows interaction with the canvas below */
+            z-index: 10;
+            /* Ensure the frame is on top */
+        }

@@ -13,6 +13,9 @@ let plantWidth = tileSize;
 let plantHeight = tileSize;
 let plantX = tileSize * columns/2 - tileSize;
 let plantY = tileSize * rows - tileSize*2;
+//ammo
+let ammo = 4;
+let maxAmmo = 4;
 
 let plant = {
     x : plantX,
@@ -95,6 +98,10 @@ function update() {
     //peas
     movePeas();
 
+    if(ammo < maxAmmo){
+        ammo += 0.02; //increase ammo
+    }
+
     //next level
     if (zombieCount == 0) {
         //increase the number of zombies in columns and rows by 1
@@ -115,7 +122,7 @@ function update() {
     //score
     context.fillStyle="white";
     context.font="16px courier";
-    context.fillText("Score:" + score + "\n Zombies:" + zombieCount, 5, 20);
+    context.fillText("Score:" + score + "\n Zombies:" + zombieCount + "\n Ammo:" + Math.floor(ammo), 5, 20);
 }
 
 function moveZombies(){
@@ -204,20 +211,26 @@ function createzombies() {
 }
 
 function shoot(e) {
+    
+
     if (gameOver) {
         return;
     }
 
     if (e.code == "Space") {
-        //shoot
-        let pea = {
-            x : plant.x + plantWidth*15/32,
-            y : plant.y,
-            width : tileSize/4,
-            height : tileSize/4,
-            used : false
+        if(ammo > 1){
+            ammo -= 1;
+
+            //shoot
+            let pea = {
+                x : plant.x + plantWidth*15/32,
+                y : plant.y,
+                width : tileSize/4,
+                height : tileSize/4,
+                used : false
+            }
+            peaArray.push(pea);
         }
-        peaArray.push(pea);
     }
 }
 

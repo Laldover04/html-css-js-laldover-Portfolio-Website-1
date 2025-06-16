@@ -181,10 +181,10 @@ function moveplant(e) {
         return;
     }
 
-    if (e.code == "ArrowLeft" && plant.x - plantVelocityX >= 0) {
+    if ((e.code == "ArrowLeft" || e.code == "KeyA") && plant.x - plantVelocityX >= 0) {
         plant.x -= plantVelocityX; //move left one tile
     }
-    else if (e.code == "ArrowRight" && plant.x + plantVelocityX + plant.width <= board.width) {
+    else if ((e.code == "ArrowRight" || e.code == "KeyD") && plant.x + plantVelocityX + plant.width <= board.width) {
         plant.x += plantVelocityX; //move right one tile
     }
 }
